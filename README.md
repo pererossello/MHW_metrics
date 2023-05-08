@@ -1,36 +1,34 @@
-<!-- # CMIP Data Retriever
+# MHW Metrics package
 
-'CMIP_data_retriever' is a Python package that simplifies the process of downloading climate data from the CMIP6 (Coupled Model Intercomparison Project Phase 6) project. It allows users to search for and download the relevant data files from the ESGF (Earth System Grid Federation) repository based on their specific needs and filtering criteria.
+'MHW_metrics' is a Python package that enables easy computation of yearly averages of Marine Heat Wave (MHW) metrics from Sea Surface Temperature (SST) netCDF4 files. The package is based on the MHW definition from Hobday et al. (2016) and was initially created for the satellite data analysis of Rosselló et al. (2023). The package is primarily intended for Copernicus Marine Service (CMEMS) datasets such as SST_GLO_SST_L4_REP_OBSERVATIONS_010_011 and SST_MED_SST_L4_REP_OBSERVATIONS_010_021, but it may also be compatible with other daily SST datasets.
 
 ## Features
 
-- Search for climate data models based on variables, experiments, models, and other filtering criteria.
-- Automatically find all models and variants within a module that contain all the selected experiments and variables. 
-- Create a pandas DataFrame with an overview of the models, their variants, variables, experiments, and other attributes.
-- Save the DataFrame to an Excel file for easy data analysis.
-- Download the data files in a nested and organized folder structure based on the specified filters and filtered models, variants, variables, and experiments.
-- Optional cropping of the data by a specified region using a polygon.
+- For a given netCDF4 file containing daily SST data for a specific region, compute the following per grid cell and per year:
+
+    - MHW days
+    - Marine Heat Spikes (MHS)
+    - Mean MHW SST anomaly
+    - Cumulative MHW SST anomaly
+    - Mean MHW duration
+- Compute the yearly distribution of these metrics for each MHW event in the region. For example, for each year, calculate the duration of all MHW events that have occurred in the region.
+
+- If there is a daily interpolation error in the SST time series, it can be incorporated to calculate upper and lower bounds of MHW metrics considering such error.
+
 
 ## Installation
 
 ```bash
-pip install git+https://github.com/canagrisa/CMIP_data_retriever.git
+pip install git+https://github.com/canagrisa/MHW_metrics.git
 ```
 
 ## Usage
-```python
-from cmip_data_retriever import CMIPDownloader
 
-variables = ['variable1', 'variable2']
-experiments = ['experiment1', 'experiment2']
+```python 
 
-downloader = CMIPDownloader(variables=variables, experiments=experiments)
+#TBD
 
-# Save the DataFrame with model information to an Excel file
-downloader.save_dataframe(outfolder='output', filename='model_info.xlsx')
 
-# Download the data files and crop for the Mediterranean Sea
-downloader.download_data(crop_region='med')
 ```
 
 ## License
@@ -43,4 +41,4 @@ For support or to report bugs, please open a GitHub issue. Contributions are wel
 
 ## Acknowledgments
 
-This package was developed using the PyESGF library to access the ESGF repository. -->
+This package uses the MHW definition and methodology of Hobday et al. (2016) and Hobday et al. (2018).
