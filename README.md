@@ -4,13 +4,16 @@
 
 ## Features
 
-- For a given netCDF4 file containing daily SST data for a specific region, compute the following per grid cell and per year:
+- For a given netCDF4 file containing daily SST data for a specific region, compute the following metrics per grid cell and per year:
 
     - MHW days
     - Marine Heat Spikes (MHS)
     - Mean MHW SST anomaly
     - Cumulative MHW SST anomaly
     - Mean MHW duration
+
+- Either a fixed baseline or moving baseline can be used. The baseline period can be adjusted. 
+
 - Compute the yearly distribution of these metrics for each MHW event in the region. For example, for each year, calculate the duration of all MHW events that have occurred in the region.
 
 - If there is a daily interpolation error in the SST time series, it can be incorporated to calculate upper and lower bounds of MHW metrics considering such error.
@@ -30,6 +33,12 @@ pip install git+https://github.com/canagrisa/MHW_metrics.git
 
 
 ```
+
+## Example Figures
+
+![Example figure of MHW metrics using a 30-year fixed baseline for a SST dataset (1982-2021) cropped around Ibiza.](./example/test_figures/fig_1_example.png)
+
+![Example figure of MHW days per year using a 30-year fixed baseline for a SST dataset (1982-2021) cropped around Ibiza.](./example/test_figures/fig_2_example.png)
 
 ## License
 
