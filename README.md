@@ -31,8 +31,37 @@ pip install git+https://github.com/canagrisa/MHW_metrics.git
 
 ```python 
 
-#TBD
+from MHW_metrics import main
+from MHW_metrics import plot_utils
 
+path = 'path_to_dataset'
+ds = xr.open_dataset(path)
+
+baseline_year_length = 30  # Set the baseline length
+baseline_type = "fixed_baseline"  # Set the type of baseline
+
+# Where to save the data
+out_folder = '../results/'
+
+# Compute the MHW Metrics
+main.MHW_metrics_satellite(
+    ds,
+    baseline_year_length,
+    baseline_type,
+    out_folder=out_folder,
+    var="analysed_sst",
+    distribution=True,
+    error=True, 
+)
+
+#Represent the results (example figures below)
+
+#Figure 1
+plot_utils.mhw_metrics(out_folder, ratio=1.1, proportions = [3.5, 2.5, 2])
+
+#Figure 2
+ds = xr.open_mfdataset(f"{out_folder}/*.nc", combine="by_coords").compute()
+plot_utils.MHW_year_array(ds, 'MHW', label = 'MHW days')
 
 ```
 
