@@ -40,6 +40,7 @@ pip install git+https://github.com/canagrisa/MHW_metrics.git
 Example figure of MHW metrics using a 30-year fixed baseline for a SST dataset (1982-2021) cropped around Ibiza.
 ![fig_1](./example/test_figures/fig_1_example.png)
 
+Example figure of MHW days per year using a 30-year fixed baseline for a SST dataset (1982-2021) cropped around Ibiza.
 ![fig_2](./example/test_figures/fig_2_example.png)
 
 ## License
