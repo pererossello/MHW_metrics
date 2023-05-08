@@ -14,7 +14,7 @@
     - Cumulative MHW SST anomaly
     - Mean MHW duration
 
-- Either a fixed baseline or moving baseline can be used. The baseline period can be adjusted. 
+- Either a fixed baseline or moving baseline can be used. The baseline period length can be adjusted. 
 
 - Compute the yearly distribution of these metrics for each MHW event in the region. For example, for each year, calculate the duration of all MHW events that have occurred in the region.
 
