@@ -146,13 +146,6 @@ def MHW_metrics_satellite(
         # Remove leap year February 29th from the dataset
         ds = ds.where(~leap_year_feb29, drop=True)
 
-    # else:
-    #     time_index = ds.indexes["time"]
-    #     if hasattr(time_index, "calendar"):
-    #         calendar = time_index.calendar
-    #         if calendar == "360_day":
-    #             year_length = 360
-
     y_i = ds.time.dt.year.min().item()
     y_f = ds.time.dt.year.max().item()
 
