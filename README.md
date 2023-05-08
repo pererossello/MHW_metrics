@@ -2,6 +2,8 @@
 
 'MHW_metrics' is a Python package that enables easy computation of yearly averages of Marine Heat Wave (MHW) metrics from Sea Surface Temperature (SST) netCDF4 files. The package is based on the MHW definition from Hobday et al. (2016) and was initially created for the satellite data analysis of Rosselló et al. (2023). The package is primarily intended for Copernicus Marine Service (CMEMS) datasets such as SST_GLO_SST_L4_REP_OBSERVATIONS_010_011 and SST_MED_SST_L4_REP_OBSERVATIONS_010_021, but it may also be compatible with other daily SST datasets.
 
+[![DOI](https://zenodo.org/badge/637851848.svg)](https://zenodo.org/badge/latestdoi/637851848)
+
 ## Features
 
 - For a given netCDF4 file containing daily SST data for a specific region, compute the following metrics per grid cell and per year:
