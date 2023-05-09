@@ -16,7 +16,7 @@
 
 - Either a fixed baseline or moving baseline can be used. The baseline period length can be adjusted. 
 
-- Compute the yearly distribution of these metrics for each MHW event in the region. For example, for each year, calculate the duration of all MHW events that have occurred in the region.
+- Compute the yearly distribution of these metrics for each MHW event in the region. For example, for each year, get a distribution of the duration of all MHW events that have occurred in the region.
 
 - If there is a daily interpolation error in the SST time series, it can be incorporated to calculate upper and lower bounds of MHW metrics considering such error.
 
