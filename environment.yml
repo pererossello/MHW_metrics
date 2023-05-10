@@ -1,4 +1,4 @@
-name: condaenv
+name: mhw_metrics_env
 channels:
   - conda-forge
   - defaults
@@ -138,4 +138,4 @@ dependencies:
   - zipp=3.15.0=pyhd8ed1ab_0
   - zlib=1.2.13=h5eee18b_0
   - zstd=1.5.2=ha4553b6_0
-prefix: /home/prossello/miniconda3/envs/condaenv
+prefix: /home/prossello/miniconda3/envs/mhw_metrics_env
