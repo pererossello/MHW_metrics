@@ -1,6 +1,4 @@
-cartopy
+
 numpy
 dask
 xarray
-matplotlib
-cmocean
