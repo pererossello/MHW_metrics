@@ -80,7 +80,7 @@ MIT License. See the LICENSE file for more information.
 
 ## Support and Contributions
 
-For support or to report bugs, please open a GitHub issue. Contributions are welcome! Feel free to submit a pull request or suggest new features by opening an issue.
+For support or to report bugs, please open a GitHub issue. Contributions are welcome! Feel free to submit a pull request or suggest new features by opening an issue
 
 ## Acknowledgments
 
